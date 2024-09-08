@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1725790822 source:d:\prefex array and sum of array c++\ tic-tac-toy\main.cpp
+	<iostream>
+	<fstream>
+	<time.h>
+	"funy.h"
+
+1725739255 d:\prefex array and sum of array c++\ tic-tac-toy\funy.h
+
+1725790834 source:d:\prefex array and sum of array c++\ tic-tac-toy\fun.cpp
+	<iostream>
+	<fstream>
+	<time.h>
+
