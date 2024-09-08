@@ -17,9 +17,9 @@ pl=1;
 void saveResults(int p){
    static int NOG=1;
  fstream file;
-    file.open("score.txt",ios::app);
-    if(p==1){file<<"game "<<NOG<<": WINS!\n";}
-    else{file<<"game "<<NOG<<":LOSE\n";}
+    file.open("score.csv",ios::app);
+    if(p==1){file<<"game "<<NOG<<":,"<<"WINS!\n";}
+    else{file<<"game "<<NOG<<":, "<<"LOSE\n";}
     NOG++;
 }
 void Win(char j){
