@@ -1,4 +1,3 @@
-#include<string>
 void Win(int pl);
 
 void clearHistroy();
@@ -7,10 +6,8 @@ void showHistroy();
 
 void initialization();
 
- string saveResults(string result,int p);
+void saveResults(int p);
 
- void addGameResult(const string& result);
- 
 int check();
 
 void board();

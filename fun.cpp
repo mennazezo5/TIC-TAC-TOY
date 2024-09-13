@@ -6,7 +6,6 @@
 #include<string>
 #include<vector>
 using namespace std;
-
 char mark;
 int pl=1;
 char s[10];
@@ -21,9 +20,13 @@ pl=1;
 }
 void saveResults(int p) {
     ofstream file("score.csv", ios::app);
+     time_t now = time(0);
+    tm *ltm = localtime(&now);
+    stringstream ss;
+    ss << 1900 + ltm->tm_year << "/" << 1 + ltm->tm_mon << "/" << ltm->tm_mday;
     if (file.is_open()) {
-        if(p==1){file<<"game "<<NOG<<":,WIN!"<<"\n";}
-        else{file<<"game "<<NOG<<":, LOSE!"<<"\n";}}
+        if(p==1){file<<"game "<<NOG<< "("<<ss.str() <<"):,WIN!"<<"\n";}
+        else{file<<"game "<<NOG<< "("<<ss.str() <<"):, LOSE!"<<"\n";}}
          else {
         cout << "Unable to open file";}
          string currentBoard="";

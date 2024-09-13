@@ -1,4 +1,3 @@
-#include<string>
 void Win(int pl);
 
 void clearHistroy();
@@ -18,3 +17,4 @@ void Game();
 void showMenu();
 
 void representGame(char gameID);
+

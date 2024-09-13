@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1726226342 source:d:\prefex array and sum of array c++\tikkkkkkk\fun.cpp
+1726227120 source:d:\prefex array and sum of array c++\tikkkkkkk\fun.cpp
 	<iostream>
 	<fstream>
 	<time.h>
@@ -14,6 +14,5 @@
 	<time.h>
 	"funy.h"
 
-1726224455 d:\prefex array and sum of array c++\tikkkkkkk\funy.h
-	<string>
+1726227011 d:\prefex array and sum of array c++\tikkkkkkk\funy.h
 
