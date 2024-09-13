@@ -1,7 +1,10 @@
 #include <iostream>
 #include<fstream>
 #include<time.h>
-
+#include <ctime>
+#include <sstream>
+#include<string>
+#include<vector>
 using namespace std;
 
 char mark;
@@ -16,17 +19,33 @@ for(int i=0;i<10;i++){
 w++;}
 pl=1;
 }
-void saveResults(int p){
+void saveResults(int p) {
+    ofstream file("score.csv", ios::app);
+    if (file.is_open()) {
+        if(p==1){file<<"game "<<NOG<<":,WIN!"<<"\n";}
+        else{file<<"game "<<NOG<<":, LOSE!"<<"\n";}}
+         else {
+        cout << "Unable to open file";}
+         string currentBoard="";
+    for (int i = 1; i < 10; i++) {
+        currentBoard += s[i];
+        if((i-1)%3==1||(i-1)%3==0){
+                 currentBoard += '|';}
+        if ((i-1) % 3 == 2) currentBoard += '\n';
+    }
+           ofstream filee("board.csv", ios::app);
+           if (file.is_open()) {
+           filee<<NOG<<endl;
+           filee<<currentBoard;}
+           filee.close();
+        file.close();
 
- fstream file;
-    file.open("score.csv",ios::app);
-    if(p==1){file<<"game "<<NOG<<":,"<<"WINS!\n";}
-    else{file<<"game "<<NOG<<":, "<<"LOSE\n";}
-    NOG++;
+        NOG++;
 }
 void clearResults() {
     NOG=1;
     ofstream file("score.csv", ios::trunc);
+    ofstream filee("board.csv", ios::trunc);
     if (file.is_open()) {cout << "History cleared.\n";
         file.close();}
     else {cout << "Unable to open file";}
@@ -50,40 +69,24 @@ void showResults() {
         else {cout << "Unable to open file";}
 }
 void Win(char j){
-if (j=='X'){pl=1;}
-else{pl=2;}
-
+if (j=='X'){pl=1; saveResults(pl);}
+else{pl=2; saveResults(pl);}
     cout<<"\a \a CONGRATULATIONS player  "<<pl<<"  WINS!\n";
-     saveResults(pl);
-    // showResults();
 }
 void representGame(char gameID) {
-    ifstream file("score.csv");
-    string line;
-    char car;
-   if (file.is_open()) {
-         while (getline(file, line)) {
-        while (file.get(car)) {
-                if(car==','){continue;}
-                else{
-            if (car == gameID) {
-                cout << "Game " << gameID << ":\n";
-                for(int i=0;i<15;i++){
-                    if(line[i]==','){
-                        continue;
-                    }
-                    else{
-                        cout<<line[i];
-                    }
-                }
-
-                break;
-            }
-        }}
-        file.close();
-    }} else {
-        cout << "Unable to open file";
+ifstream fi("board.csv");
+char ch;
+while(fi.get(ch)){
+    if(ch==gameID){
+        for(int i=0;i<19;i++){
+                fi.get(ch);
+            cout<<ch;
+        }
+        break;
     }
+}
+fi.close();
+
 }
 int check(){
      if (End==0) {return -2;}
@@ -186,6 +189,8 @@ void showMenu() {
             if (gameID != '0') {
                 representGame(gameID);
             }
+            else{clearResults();
+                    break;}
             cout << "\nControls:\n";
             cout << "[1]: New Game\n";
             cout << "[10]: Clear History\n";
@@ -201,5 +206,6 @@ void showMenu() {
             cout << "Invalid choice. Try again.\n";
         }
     }
+    clearResults();
 }
 

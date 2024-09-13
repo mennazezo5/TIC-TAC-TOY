@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1726226342 source:d:\prefex array and sum of array c++\tikkkkkkk\fun.cpp
+	<iostream>
+	<fstream>
+	<time.h>
+	<ctime>
+	<sstream>
+	<string>
+	<vector>
+
+1725804187 source:d:\prefex array and sum of array c++\tikkkkkkk\main.cpp
+	<iostream>
+	<fstream>
+	<time.h>
+	"funy.h"
+
+1726224455 d:\prefex array and sum of array c++\tikkkkkkk\funy.h
+	<string>
+

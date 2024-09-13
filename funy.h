@@ -1,3 +1,4 @@
+#include<string>
 void Win(int pl);
 
 void clearHistroy();

@@ -1,1 +1,44 @@
+game: WINS!
+game: WINS!
+game: WINS!
+game: WINS!
+game1: WINS!
+game: WINS!
+game 1: WINS!
+game 1: WINS!
+game 2: WINS!
+game 3: WINS!
 game 1:LOSE
+game 2:LOSE
+game 1: WINS!
+game 1: WINS!
+game 2:LOSE
+game 3:LOSE
+game 4:LOSE
+game 5:LOSE
+game 6:LOSE
+game 7:LOSE
+game 1: WINS!
+game 2: WINS!
+game 3: WINS!
+game 4: WINS!
+game 1: WINS!
+game 1: WINS!
+game 1: WINS!
+game 1: WINS!
+game 1:LOSE
+game 1: WINS!
+game 1: WINS!
+game 1:LOSE
+game 1:LOSE
+game 1:LOSE
+game 1: WINS!
+game 1: WINS!
+game 1: WINS!
+game 2: WINS!
+game 1: WINS!
+game 1: WINS!
+game 2: WINS!
+game 3:LOSE
+game 1:LOSE
+game 1: WINS!
